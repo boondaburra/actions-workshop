@@ -1,1 +1,15 @@
+name: Helow World Training Workflow
 
+on:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Greet the User
+        run: echo "Hello World!"
+      # List all files in the current directory for comparison before and after
+      -run: ls -l
+      -uses: actions/checkout@v2
+      -run: ls -l
